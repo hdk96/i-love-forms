@@ -1,37 +1,28 @@
 <div class="container">
-    <div class="row" >
-       <%= form_for(@user, url: {action: "create3"}) do |f| %>
-    <div class= "form-group">
-        <div class= "col-md-2 control-label">
+    <h1>Bienvenue dans la création d'utilisateurs !</h1>
+
+    <%= form_for @user, url: {action: "create2"} do |f| %>
+
+    <div class="row">
+        <div class="col form-group name">
             <%=f.label :username %>
-        </div>
-        <div class="col-md-6">
-            <%=f.text_field :username, class: "form-control", placeholder: "Votre Username" %>
-        </div>
+        <%=f.text_field :username, placeholder: "Votre Username" %>
     </div>
-    
-    <div class= "form-group">
-        <div class= "col-md-2 control-label">
-           <%=f.label :email %>
-        </div>
-        <div class="col-md-6">
-            <%=f.text_field :email,rows: 10, class: "form-control", placeholder: "Votre Email" %>
-        </div>
+
+
+    <div class="col form-group mail">
+        <%=f.label :email %>
+        <%=f.text_field :email, placeholder: "Votre Email" %>
     </div>
-    <div class= "form-group">
-        <div class= "col-md-2 control-label">
-           <%=f.label :bio %>
-        </div>
-        <div class="col-md-6">
-            <%=f.text_area :bio,rows: 10, class: "form-control", placeholder: "Votre Bio" %>
-        </div>
-    
-    <div class= "form-group">
-        <div class= "col-sm-offset-2 col-md-10">
-        <%= f.submit(@user.new_record? ? "S'inscrire" : "Mettre a jour", class: "btn btn-default") %>
-        </div>
-    </div>
-    </div>
-    <%end%>
-    </div>
+</div>
+
+<div class="col form-group bio">
+       <%=f.label :bio %>
+        <%=f.text_area :bio, rows: "4", cols: "50", placeholder: "Votre Bio" %>
+</div>
+
+<div class="validation form-group"> 
+   <%= f.submit   class: "btn btn-info btn-default" %>
+</div>
+<%end%>
 </div>

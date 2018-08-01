@@ -1,12 +1,28 @@
-<h1>Bienvenue dans la création d'utilisateurs !</h1>
+<div class="container">
+  <h1>Bienvenue dans la création d'utilisateurs !</h1>
 
 <form action="/new" method="post">
 
   <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
-    Username: <input name="username" type="text"><br>
 
-    E-mail:   <input type="email" name="email"><br>
+    <div class="row">
+    <div class="col form-group name">
+     Username: <input name="username" type="text" placeholder="Votre Username"><br>
+    </div>
 
-    Bio:      <textarea name="bio" rows="4" cols="50"> </textarea><br>
-              <input type="submit" value="Submit">
+    <div class="col form-group mail">
+     E-mail:   <input type="email" name="email" placeholder="Votre Email"><br>
+    </div>
+  </div>
+  
+  <div class="col form-group bio">
+      Bio:      <textarea name="bio" rows="4" cols="50" placeholder="Votre Bio"> </textarea><br>
+  </div>
+
+  <div class="validation form-group"> 
+        <input class="btn btn-info btn-lg"  type="submit" value="Valider">
+ </div>
+
 </form>
+
+</div>

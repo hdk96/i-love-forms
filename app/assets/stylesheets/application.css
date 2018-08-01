@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+  background-color:#ECF0F1 !important;
+}
+input[type=text], input[type=email]{
+  border: 2px solid #05F5C5 ;
+    border-radius: 5px;
+    resize: vertical;
+
+}
+textarea {
+  border: 2px solid #05F5C5 ;
+    border-radius: 10px;
+    resize: vertical;
+
+}
+h1{
+  margin-bottom: 100px !important;
+}
+.name{
+  margin-right: -200px;
+  margin-bottom: 35px !important;
+}
+.mail{
+  margin-left:  -200px;
+  margin-bottom: 35px !important;
+}
+.container{
+  margin-top: 40px;
+   text-align: center;
+}
+
+.validation{
+  margin-left: 50%;
+  margin-right: 50%;
+  padding-top: 10px;
+}
